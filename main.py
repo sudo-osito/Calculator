@@ -1,5 +1,8 @@
 # Calculator
 
+from pickle import STOP
+
+
 def add(a, b):
     return a + b
 
@@ -31,6 +34,11 @@ def main():
         b = int(input("Enter second number: "))
         print("--------------------------------")
         print(f"Result: {add(a, b)}")
+        print("Do you want to continue? (y/n)")
+        if input() == "y":
+            main()
+        else:
+            return print("Exiting...")
 
     elif choice == 2:
         print("Subtraction")
@@ -38,6 +46,11 @@ def main():
         b = int(input("Enter second number: "))
         print("--------------------------------")
         print(f"Result: {subtract(a, b)}")
+        print("Do you want to continue? (y/n)")
+        if input() == "y":
+            main()
+        else:
+            return print("Exiting...")
 
     elif choice == 3:
         print("Multiplication")
@@ -45,6 +58,11 @@ def main():
         b = int(input("Enter second number: "))
         print("--------------------------------")
         print(f"Result: {multiply(a, b)}")
+        print("Do you want to continue? (y/n)")
+        if input() == "y":
+            main()
+        else:
+            return print("Exiting...")
 
     elif choice == 4:
         print("Division")
@@ -52,7 +70,15 @@ def main():
         b = int(input("Enter second number: "))
         print("--------------------------------")
         print(f"Result: {divide(a, b)}")
-
+        print("Do you want to continue? (y/n)")
+        if input() == "y":
+            main()
+        else:
+            return print("Exiting...")
+            
+    elif choice == 5:
+        return print("Exiting...")
+          
     else:
         print("Invalid choice")
 
